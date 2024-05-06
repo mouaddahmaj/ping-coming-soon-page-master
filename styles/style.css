@@ -43,6 +43,9 @@ body{
     font-weight: bold;
     color: hsl(209, 33%, 12%);
 }
+.header>div h1+p{
+    color: hsl(209, 33%, 12%);
+}
 
 .header form{
     width: 100%;
@@ -51,11 +54,12 @@ body{
     justify-content: space-between;
 }
 .header form div:first-child{
-    width:60% ;
+    width:65% ;
 }
 .header form div:first-child input{
-    width: 100%;
-    padding-left:20px ;
+    width: 92%;
+    padding-left: 8%;
+    
     
 }
 .header form div:last-child{
@@ -67,6 +71,8 @@ body{
     background-color: hsl(223, 87%, 63%);
     color: hsl(223, 100%, 88%);
     font-weight: bold;
+    border: 1px solid hsl(223, 87%, 63%);
+
 }
 .header form div:last-child input:hover{
     background-color:hsl(223, 76%, 71%) ;
@@ -76,8 +82,12 @@ input{
     padding-top: 12px;
     padding-bottom: 12px;
     border-radius: 30px;
-    border: none;
 }
+input::placeholder{
+    color: hsl(223, 100%, 88%);
+    
+}
+
 .default{
     display: none;
 }
@@ -127,4 +137,38 @@ input{
     color: white;
     cursor: pointer;
 
+}
+@media screen and (max-width:450px) {
+    .header form{
+        width: 90%;
+        
+        flex-direction: column;
+        align-items: center;
+    }
+    .header form div:first-child,.header form div:last-child{
+        width:100% ;
+        font-display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .header form div:first-child{
+        margin-bottom: 20px;
+    }
+    .header form div:first-child input{
+        width: 92%;
+
+        padding-left: 8%;
+        
+        
+    }
+    .msgErr{
+     text-align: center;
+    }.header+img{
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    
+    
 }
